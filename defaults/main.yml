@@ -14,3 +14,7 @@ auto_login_group_name: "autologin"
 # ansible description for auto-login block edits
 auto_login_block_description: "auto-login"
 
+# the "Seat" section in the main LightDM configuration file
+lightdm_conf_seat_section: >-
+  ^\[Seat:\*\]$
+

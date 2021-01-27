@@ -3,6 +3,5 @@
   vars:
     block_description: "{{ auto_login_block_description }}"
     block_lines: "autologin-user="
-    lightdm_conf_section: >-
-      ^\[Seat:\*\]$
+    lightdm_conf_section: "{{ lightdm_conf_seat_section }}"
 
