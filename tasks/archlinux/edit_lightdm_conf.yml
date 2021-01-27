@@ -1,0 +1,11 @@
+- name: "Edit block in {{ lightdm_conf_path }}: {{ block_description }}"
+  ansible.builtin.blockinfile:
+    path: "{{ lightdm_conf_path }}"
+    insertafter: EOF
+    block: "{{ block_lines }}"
+    marker: "# {mark} ANSIBLE MANAGED BLOCK: {{ block_description }}"
+    create: no
+    state: present
+  become: true
+  become_user: root
+
