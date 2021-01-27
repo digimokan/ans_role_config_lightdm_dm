@@ -10,5 +10,6 @@
     name: ans_role_add_user
   vars:
     user_name: "{{ auto_login_user_name }}"
-    user_groups: "{{ auto_login_group_name }}"
+    user_groups:
+      - "{{ auto_login_group_name }}"
 
