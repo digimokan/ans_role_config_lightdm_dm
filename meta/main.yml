@@ -1,0 +1,14 @@
+galaxy_info:
+  author: digimokan
+  description: "Configure the LightDM display manager"
+  license: "MIT"
+  min_ansible_version: 2.3
+  platforms:
+    - name: Archlinux
+      versions:
+        - all
+  galaxy_tags:
+    - archlinux
+    - lightdm
+    - display_manager
+
