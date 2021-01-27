@@ -1,7 +1,11 @@
-- name: "LightDM: install 'lightdm' package"
+- name: "Install main lightdm packages {{ main_lightdm_pkgs }}"
   community.general.pacman:
-    name: lightdm
+    name: "{{ main_lightdm_pkgs }}"
     state: present
+  vars:
+    main_lightdm_pkgs:
+      - lightdm
+      - lightdm-gtk-greeter
   become: true
   become_user: root
 
