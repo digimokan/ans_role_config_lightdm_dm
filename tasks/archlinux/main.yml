@@ -15,3 +15,11 @@
   become: true
   become_user: root
 
+- name: "Configure LightDM for automatic login for user '{{ auto_login_user_name }}'"
+  ansible.builtin.include_tasks: config_auto_login.yml
+  when: auto_login_user_name != ''
+
+- name: "Configure LightDM for graphical greeter (disable automatic login)"
+  ansible.builtin.include_tasks: config_greeter.yml
+  when: auto_login_user_name == ''
+

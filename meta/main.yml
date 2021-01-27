@@ -12,3 +12,11 @@ galaxy_info:
     - lightdm
     - display_manager
 
+dependencies:
+  - src: https://github.com/digimokan/ans_role_add_group
+    tags:
+      - never
+  - src: https://github.com/digimokan/ans_role_add_user
+    tags:
+      - never
+

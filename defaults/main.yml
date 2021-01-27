@@ -4,3 +4,6 @@ auto_login_user_name: ""
 # Main LightDM configuration file
 lightdm_conf_path: "/etc/lightdm/lightdm.conf"
 
+# group name used by LightDM to facilitate user auto-login
+auto_login_group_name: "autologin"
+

@@ -12,6 +12,7 @@ Configure the LightDM display manager.
 * [Quick Start](#quick-start)
     * [Use From Playbook](#use-from-playbook)
 * [Role Options](#role-options)
+* [Role Dependencies](#role-dependencies)
 * [Contributing](#contributing)
 
 ## Purpose
@@ -66,6 +67,11 @@ See the role `defaults` file, for overridable vars:
 Define these _required_ vars for the role:
 
   * `video_card_make`: either "Intel" or "AMD"
+
+## Role Dependencies
+
+* [ans_role_add_group](https://github.com/digimokan/ans_role_add_group)
+* [ans_role_add_user](https://github.com/digimokan/ans_role_add_user)
 
 ## Contributing
 
