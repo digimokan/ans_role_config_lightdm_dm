@@ -19,4 +19,6 @@
     block_lines: |
       autologin-user={{ auto_login_user_name }}
       autologin-session={{ auto_login_session }}
+    lightdm_conf_section: >-
+      ^[Seat:*]$
 
