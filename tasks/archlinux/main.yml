@@ -23,3 +23,10 @@
   ansible.builtin.include_tasks: config_greeter.yml
   when: not (auto_login_user_name)
 
+- name: "Enable lightdm service to start at boot"
+  ansible.builtin.service:
+    name: lightdm
+    enabled: yes
+  become: true
+  become_user: root
+
