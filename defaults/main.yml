@@ -1,0 +1,6 @@
+# user name to log in automatically (use "" to disable automatic login)
+auto_login_user_name: ""
+
+# Main LightDM configuration file
+lightdm_conf_path: "/etc/lightdm/lightdm.conf"
+

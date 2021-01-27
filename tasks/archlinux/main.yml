@@ -5,3 +5,13 @@
   become: true
   become_user: root
 
+- name: "Configure auto-login user '{{ auto_login_user_name | default('NONE', true) }}' in {{ lightdm_conf_path }}"
+  ansible.builtin.blockinfile:
+    path: "{{ lightdm_conf_path }}"
+    insertafter: EOF
+    block: "autologin-user={{ auto_login_user_name }}"
+    marker: "# {mark} ANSIBLE MANAGED BLOCK: auto-login user"
+    state: present
+  become: true
+  become_user: root
+
