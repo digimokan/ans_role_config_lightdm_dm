@@ -1,14 +1,11 @@
 # user name to log in automatically (use "" to disable automatic login)
 auto_login_user_name: ""
 
-# if auto-login is enabled, select the session to run
+# select the session to run
 # see /usr/share/xsessions/ for session names ("mate", "kodi", "xfce", etc)
-auto_login_session: "mate"
+session: "mate"
 
-# Main LightDM configuration file
-lightdm_conf_path: "/etc/lightdm/lightdm.conf"
-
-# group name used by LightDM to facilitate user auto-login
+# group name used internally by LightDM application to execute user auto-login
 auto_login_group_name: "autologin"
 
 # ansible description for auto-login block edits

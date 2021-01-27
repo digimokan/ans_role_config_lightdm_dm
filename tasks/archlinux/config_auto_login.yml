@@ -18,6 +18,5 @@
     block_description: "{{ auto_login_block_description }}"
     block_lines: |
       autologin-user={{ auto_login_user_name }}
-      autologin-session={{ auto_login_session }}
     lightdm_conf_section: "{{ lightdm_conf_seat_section }}"
 
