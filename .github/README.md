@@ -63,7 +63,8 @@ See the role `defaults` file, for overridable vars:
 
 Define these _optional_ vars for the role:
 
-  * `login_menu_hidden_users`: a _list_ of users to hide in the login menu
+  * `login_menu_hidden_users`: a _string_, or _list_, of users to hide in the
+    login menu
 
 ## Role Dependencies
 
