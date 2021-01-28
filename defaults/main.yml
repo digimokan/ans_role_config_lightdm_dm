@@ -8,6 +8,3 @@ session: "mate"
 # group name used internally by LightDM application to execute user auto-login
 auto_login_group_name: "autologin"
 
-# ansible description for auto-login block edits
-auto_login_block_description: "auto-login"
-

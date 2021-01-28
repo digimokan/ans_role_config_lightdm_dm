@@ -15,7 +15,7 @@
 - name: "Configure auto-login for user '{{ auto_login_user_name }}' in {{ lightdm_conf_path }}"
   ansible.builtin.include_tasks: edit_lightdm_conf.yml
   vars:
-    block_description: "{{ auto_login_block_description }}"
+    block_description: "autologin-user"
     block_lines: |
       autologin-user={{ auto_login_user_name }}
 
