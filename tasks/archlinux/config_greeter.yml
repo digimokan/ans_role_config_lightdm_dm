@@ -10,3 +10,12 @@
     block_description: "manual login option"
     block_lines: "greeter-show-manual-login=true"
 
+- name: "Install '{{ accounts_svc_pkg }}' package, to hide system users in menu"
+  community.general.pacman:
+    name: "{{ accounts_svc_pkg }}"
+    state: present
+  vars:
+    accounts_svc_pkg: "accountsservice"
+  become: true
+  become_user: root
+
