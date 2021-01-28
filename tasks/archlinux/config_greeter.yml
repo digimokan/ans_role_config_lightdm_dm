@@ -14,7 +14,7 @@
   ansible.builtin.lineinfile:
     path: "/etc/lightdm/users.conf"
     regexp: >-
-      ^hidden-users=nobody nobody4 noaccess$
+      ^hidden-users=
     line: >-
       hidden-users=nobody nobody4 noaccess{{ users_string }}
     create: no
