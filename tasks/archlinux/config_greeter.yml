@@ -3,12 +3,10 @@
   vars:
     block_description: "{{ auto_login_block_description }}"
     block_lines: "autologin-user="
-    lightdm_conf_section: "{{ lightdm_conf_seat_section }}"
 
 - name: "Enable manual greeter login option in {{ lightdm_conf_path }}"
   ansible.builtin.include_tasks: edit_lightdm_conf.yml
   vars:
     block_description: "manual login option"
     block_lines: "greeter-show-manual-login=true"
-    lightdm_conf_section: "{{ lightdm_conf_seat_section }}"
 

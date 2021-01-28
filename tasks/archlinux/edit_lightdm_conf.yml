@@ -1,7 +1,8 @@
 - name: "Edit block in {{ lightdm_conf_path }}: {{ block_description }}"
   ansible.builtin.blockinfile:
     path: "{{ lightdm_conf_path }}"
-    insertafter: "{{ lightdm_conf_section }}"
+    insertafter: >-
+      ^\[Seat:\*\]$
     block: "{{ block_lines }}"
     marker: "# {mark} ANSIBLE MANAGED BLOCK: {{ block_description }}"
     create: no
