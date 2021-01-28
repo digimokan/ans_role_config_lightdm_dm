@@ -16,7 +16,7 @@
     regexp: >-
       ^hidden-users=nobody nobody4 noaccess$
     line: >-
-      hidden-users=nobody nobody4 noaccess{{ users_list | map('regex_replace', '^', ' ') | list }} }}
+      hidden-users=nobody nobody4 noaccess{{ users_list | map('regex_replace', '^', ' ') | list }}
     create: no
     state: present
   vars:
