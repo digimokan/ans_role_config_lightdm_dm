@@ -16,7 +16,7 @@
     regexp: >-
       ^hidden-users=nobody nobody4 noaccess$
     line: >-
-      ^hidden-users=nobody nobody4 noaccess {{ login_menu_hide_users }}$
+      hidden-users=nobody nobody4 noaccess {{ login_menu_hide_users }}
     create: no
     state: present
   become: true
