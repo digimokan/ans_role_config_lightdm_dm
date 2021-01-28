@@ -53,9 +53,6 @@ Configure the LightDM display manager.
        - name: "Configure the LightDM display manager"
          ansible.builtin.include_role:
            name: ans_role_config_lightdm_dm
-         vars:
-           video_card_make: "Intel"
-           video_card_series: "HD"
    ```
 
 ## Role Options
@@ -64,9 +61,9 @@ See the role `defaults` file, for overridable vars:
 
   * [defaults/main.yml](../defaults/main.yml)
 
-Define these _required_ vars for the role:
+Define these _optional_ vars for the role:
 
-  * `video_card_make`: either "Intel" or "AMD"
+  * `login_menu_hidden_users`: a _list_ of users to hide in the login menu
 
 ## Role Dependencies
 
