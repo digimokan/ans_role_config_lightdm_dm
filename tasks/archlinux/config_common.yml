@@ -6,6 +6,7 @@
     main_lightdm_pkgs:
       - lightdm
       - lightdm-gtk-greeter
+      - accountsservice
   become: true
   become_user: root
 
