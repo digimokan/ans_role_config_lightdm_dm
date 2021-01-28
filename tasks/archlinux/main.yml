@@ -3,6 +3,8 @@
 
 - name: "Configure LightDM for automatic login for user '{{ auto_login_user_name }}'"
   ansible.builtin.include_tasks: config_auto_login.yml
+  vars:
+    auto_login_group_name: "autologin"
   when: (auto_login_user_name)
 
 - name: "Configure LightDM for graphical greeter (disable automatic login)"

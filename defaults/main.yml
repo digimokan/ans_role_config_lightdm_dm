@@ -5,6 +5,3 @@ auto_login_user_name: ""
 # see /usr/share/xsessions/ for session names ("mate", "kodi", "xfce", etc)
 session: "mate"
 
-# group name used internally by LightDM application to execute user auto-login
-auto_login_group_name: "autologin"
-
