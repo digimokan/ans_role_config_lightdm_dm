@@ -61,11 +61,6 @@ See the role `defaults` file, for overridable vars:
 
   * [defaults/main.yml](../defaults/main.yml)
 
-Define these _optional_ vars for the role:
-
-  * `login_menu_hidden_users`: a _string_, or _list_, of users to hide in the
-    login menu
-
 ## Role Dependencies
 
 * [ans_role_add_group](https://github.com/digimokan/ans_role_add_group)
