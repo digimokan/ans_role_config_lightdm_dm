@@ -10,15 +10,17 @@
     block_description: "manual login option"
     block_lines: "greeter-show-manual-login=true"
 
-- name: "Set login menu to hide users {{ login_menu_hide_users }}"
+- name: "Set login menu to hide users {{ users_list }}"
   ansible.builtin.lineinfile:
     path: "/etc/lightdm/users.conf"
     regexp: >-
       ^hidden-users=nobody nobody4 noaccess$
     line: >-
-      hidden-users=nobody nobody4 noaccess {{ login_menu_hide_users }}
+      hidden-users=nobody nobody4 noaccess{{ users_list | map('regex_replace', '^', ' ') | list }} }}
     create: no
     state: present
+  vars:
+    users_list: "{{ [ login_menu_hide_users ] if (login_menu_hide_users is string) else login_menu_hide_users }}"
   become: true
   become_user: root
 

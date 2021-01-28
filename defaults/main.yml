@@ -6,7 +6,7 @@ auto_login_user_name: ""
 session: "mate"
 
 # string, or list, of user-names to hide from greeter user-selection menu
-login_menu_hide_users: ""
+login_menu_hide_users: []
 
 # group name used internally by LightDM application to execute user auto-login
 auto_login_group_name: "autologin"
