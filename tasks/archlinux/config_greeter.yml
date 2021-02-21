@@ -10,6 +10,16 @@
     block_description: "manual login option"
     block_lines: "greeter-show-manual-login=true"
 
+- name: "Set login screen background image to {{ login_screen_image_path }}"
+  ansible.builtin.include_tasks: edit_lightdm_conf.yml
+  vars:
+    conf_file_path: "/etc/lightdm/lightdm-gtk-greeter.conf"
+    block_description: "login screen background image"
+    block_lines: "background={{ login_screen_image_path }}"
+    insertafter: >-
+      ^\[greeter:\*\]$
+  when: (login_screen_image_path)
+
 - name: "Install '{{ accounts_svc_pkg }}' package, to hide system users in menu"
   community.general.pacman:
     name: "{{ accounts_svc_pkg }}"

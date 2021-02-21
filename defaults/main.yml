@@ -5,3 +5,6 @@ auto_login_user_name: ""
 # see /usr/share/xsessions/ for session names ("mate", "kodi", "xfce", etc)
 session: "mate"
 
+# set background-image-path for login screen (set to empty string for no image)
+login_screen_image_path: ""
+

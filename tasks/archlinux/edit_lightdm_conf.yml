@@ -1,6 +1,6 @@
-- name: "Edit block in {{ lightdm_conf_path }}: {{ block_description }}"
+- name: "Edit block in {{ conf_file_path }}: {{ block_description }}"
   ansible.builtin.blockinfile:
-    path: "{{ lightdm_conf_path }}"
+    path: "{{ conf_file_path }}"
     insertafter: >-
       ^\[Seat:\*\]$
     block: "{{ block_lines }}"
@@ -8,7 +8,7 @@
     create: no
     state: present
   vars:
-    lightdm_conf_path: "/etc/lightdm/lightdm.conf"
+    conf_file_path: "/etc/lightdm/lightdm.conf"
   become: true
   become_user: root
 
