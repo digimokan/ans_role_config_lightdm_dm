@@ -1,11 +1,15 @@
-- name: "Install main lightdm packages {{ main_lightdm_pkgs }}"
+- name: "Install main 'lightdm' package"
   community.general.pacman:
-    name: "{{ main_lightdm_pkgs }}"
+    name: lightdm
     state: present
-  vars:
-    main_lightdm_pkgs:
-      - lightdm
-      - lightdm-gtk-greeter
+  become: true
+  become_user: root
+
+- name: "Install 'lightdm-gtk-greeter' package, for GUI menu and auto-login"
+  community.general.pacman:
+    name: lightdm-gtk-greeter
+    state: present
+    extra_args: "--asdeps"
   become: true
   become_user: root
 
