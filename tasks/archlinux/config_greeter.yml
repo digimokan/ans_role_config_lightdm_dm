@@ -1,10 +1,10 @@
-- name: "Disable auto-login in {{ lightdm_conf_path }}"
+- name: "Disable auto-login"
   ansible.builtin.include_tasks: edit_lightdm_conf.yml
   vars:
     block_description: "autologin-user"
     block_lines: "autologin-user="
 
-- name: "Enable manual greeter login option in {{ lightdm_conf_path }}"
+- name: "Enable manual greeter login option"
   ansible.builtin.include_tasks: edit_lightdm_conf.yml
   vars:
     block_description: "manual login option"

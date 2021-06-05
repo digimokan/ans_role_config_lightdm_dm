@@ -13,7 +13,7 @@
   become: true
   become_user: root
 
-- name: "Set session to '{{ session }}' in {{ lightdm_conf_path }}"
+- name: "Set default session to '{{ session }}'"
   ansible.builtin.include_tasks: edit_lightdm_conf.yml
   vars:
     block_description: "user-session"
