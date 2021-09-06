@@ -12,6 +12,6 @@
   when: (auto_login_user_name)
 
 - name: "Configure LightDM graphical greeter login, for all users"
-  ansible.builtin.include_tasks: config_greeter.yml
+  ansible.builtin.include_tasks: config_graphical_login/main.yml
   when: not (auto_login_user_name)
 
