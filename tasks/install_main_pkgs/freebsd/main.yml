@@ -12,9 +12,3 @@
   become: true
   become_user: root
 
-- name: "Install 'accountsservice' package, to hide system users in menu"
-  ansible.builtin.package:
-    name: accountsservice
-    state: present
-  become: true
-  become_user: root
