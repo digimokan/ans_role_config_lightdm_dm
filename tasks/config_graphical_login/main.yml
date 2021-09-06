@@ -1,17 +1,17 @@
 - name: "Disable auto-login"
-  ansible.builtin.include_tasks: edit_lightdm_conf.yml
+  ansible.builtin.include_tasks: func/edit_lightdm_conf.yml
   vars:
     block_description: "autologin-user"
     block_lines: "autologin-user="
 
 - name: "Enable manual greeter login option"
-  ansible.builtin.include_tasks: edit_lightdm_conf.yml
+  ansible.builtin.include_tasks: func/edit_lightdm_conf.yml
   vars:
     block_description: "manual login option"
     block_lines: "greeter-show-manual-login=true"
 
 - name: "Set login screen background image to {{ login_screen_image_path }}"
-  ansible.builtin.include_tasks: edit_lightdm_gtk_conf.yml
+  ansible.builtin.include_tasks: func/edit_lightdm_gtk_conf.yml
   vars:
     block_description: "login screen background image"
     block_lines: "background={{ login_screen_image_path }}"

@@ -13,7 +13,7 @@
     user_groups: "{{ auto_login_group_name }}"
 
 - name: "Configure auto-login for user '{{ auto_login_user_name }}'"
-  ansible.builtin.include_tasks: edit_lightdm_conf.yml
+  ansible.builtin.include_tasks: func/edit_lightdm_conf.yml
   vars:
     block_description: "autologin-user"
     block_lines: |
