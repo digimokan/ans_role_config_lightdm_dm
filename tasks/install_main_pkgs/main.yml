@@ -1,0 +1,8 @@
+- name: "Install main LightDM packages for Arch Linux"
+  ansible.builtin.include_tasks: archlinux/main.yml
+  when: ansible_os_family == "Archlinux"
+
+- name: "Install main LightDM packages for FreeBSD"
+  ansible.builtin.include_tasks: freebsd/main.yml
+  when: ansible_os_family == "FreeBSD"
+

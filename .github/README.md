@@ -23,6 +23,7 @@ Configure the LightDM display manager.
 ## Supported Operating Systems
 
 * Arch Linux.
+* FreeBSD.
 
 ## Quick Start
 

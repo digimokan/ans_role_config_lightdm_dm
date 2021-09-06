@@ -11,20 +11,11 @@
     block_lines: "greeter-show-manual-login=true"
 
 - name: "Set login screen background image to {{ login_screen_image_path }}"
-  ansible.builtin.include_tasks: edit_lightdm_conf.yml
+  ansible.builtin.include_tasks: edit_lightdm_gtk_conf.yml
   vars:
-    conf_file_path: "/etc/lightdm/lightdm-gtk-greeter.conf"
     block_description: "login screen background image"
     block_lines: "background={{ login_screen_image_path }}"
     insertafter: >-
       ^\[greeter:\*\]$
   when: (login_screen_image_path)
-
-- name: "Install 'accountsservice' package, to hide system users in menu"
-  community.general.pacman:
-    name: accountsservice
-    state: present
-    extra_args: "--asdeps"
-  become: true
-  become_user: root
 

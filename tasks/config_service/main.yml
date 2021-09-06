@@ -1,0 +1,7 @@
+- name: "Enable lightdm service to start at boot"
+  ansible.builtin.service:
+    name: lightdm
+    enabled: yes
+  become: true
+  become_user: root
+

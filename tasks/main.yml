@@ -1,4 +1,17 @@
-- name: "Configure LightDM for Arch Linux"
-  ansible.builtin.include_tasks: archlinux/main.yml
-  when: ansible_os_family == "Archlinux"
+- name: "Install main DM, greeter, and support LightDM packages"
+  ansible.builtin.include_tasks: install_main_pkgs/main.yml
+
+- name: "Configure LightDM login service"
+  ansible.builtin.include_tasks: config_service/main.yml
+
+- name: "Configure LightDM session, for the selected desktop environment"
+  ansible.builtin.include_tasks: config_session/main.yml
+
+- name: "Configure LightDM console-only auto-login for user '{{ auto_login_user_name }}'"
+  ansible.builtin.include_tasks: config_auto_login/main.yml
+  when: (auto_login_user_name)
+
+- name: "Configure LightDM graphical greeter login, for all users"
+  ansible.builtin.include_tasks: config_greeter.yml
+  when: not (auto_login_user_name)
 

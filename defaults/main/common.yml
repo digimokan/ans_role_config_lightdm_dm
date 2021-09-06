@@ -1,6 +1,9 @@
 # user name to log in automatically (use "" to disable automatic login)
 auto_login_user_name: ""
 
+# auto-login group (used if auto_login_group_name is defined)
+auto_login_group_name: "autologin"
+
 # select the session to run
 # see /usr/share/xsessions/ for session names ("mate", "kodi", "xfce", etc)
 session: "mate"

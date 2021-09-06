@@ -13,16 +13,11 @@
   become: true
   become_user: root
 
-- name: "Set default session to '{{ session }}'"
-  ansible.builtin.include_tasks: edit_lightdm_conf.yml
-  vars:
-    block_description: "user-session"
-    block_lines: "user-session={{ session }}"
-
-- name: "Enable lightdm service to start at boot"
-  ansible.builtin.service:
-    name: lightdm
-    enabled: yes
+- name: "Install 'accountsservice' package, to hide system users in menu"
+  community.general.pacman:
+    name: accountsservice
+    state: present
+    extra_args: "--asdeps"
   become: true
   become_user: root
 

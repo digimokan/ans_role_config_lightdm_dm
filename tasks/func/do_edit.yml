@@ -7,8 +7,6 @@
     marker: "# {mark} ANSIBLE MANAGED BLOCK: {{ block_description }}"
     create: no
     state: present
-  vars:
-    conf_file_path: "/etc/lightdm/lightdm.conf"
   become: true
   become_user: root
 
