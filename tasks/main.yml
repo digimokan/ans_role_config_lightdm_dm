@@ -9,9 +9,9 @@
 
 - name: "Configure LightDM console-only auto-login for user '{{ auto_login_user_name }}'"
   ansible.builtin.include_tasks: config_auto_login/main.yml
-  when: (auto_login_user_name)
+  when: set_auto_login
 
 - name: "Configure LightDM graphical greeter login, for all users"
   ansible.builtin.include_tasks: config_graphical_login/main.yml
-  when: not (auto_login_user_name)
+  when: not set_auto_login
 

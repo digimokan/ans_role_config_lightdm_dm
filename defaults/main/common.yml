@@ -1,5 +1,5 @@
-# user name to log in automatically (use "" to disable automatic login)
-auto_login_user_name: ""
+# set default_user_name to login automatically
+set_auto_login: false
 
 # auto-login group (used if auto_login_group_name is defined)
 auto_login_group_name: "autologin"

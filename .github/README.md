@@ -54,6 +54,9 @@ Configure the LightDM display manager.
        - name: "Configure the LightDM display manager"
          ansible.builtin.include_role:
            name: ans_role_config_lightdm_dm
+         vars:
+           default_user_name: 'user1'
+           session: 'mate'
    ```
 
 ## Role Options
@@ -61,6 +64,10 @@ Configure the LightDM display manager.
 See the role `defaults` file, for overridable vars:
 
   * [defaults/main.yml](../defaults/main.yml)
+
+Define these _required_ vars for the role:
+
+  * `default_user_name`: user to select as default in login menu, or for auto-login
 
 ## Role Dependencies
 
