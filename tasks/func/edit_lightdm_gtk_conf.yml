@@ -1,11 +1,11 @@
 - name: "Edit 'lightdm-gtk-greeter.conf' file for Arch Linux"
-  ansible.builtin.include_tasks: do_edit.yml
+  ansible.builtin.include_tasks: do_conf_edit.yml
   vars:
     conf_file_path: "{{ linux_lightdm_gtk_greeter_conf_path }}"
   when: ansible_system == "Linux"
 
 - name: "Edit 'lightdm-gtk-greeter.conf' file for FreeBSD"
-  ansible.builtin.include_tasks: do_edit.yml
+  ansible.builtin.include_tasks: do_conf_edit.yml
   vars:
     conf_file_path: "{{ freebsd_lightdm_gtk_greeter_conf_path }}"
   when: ansible_os_family == "FreeBSD"
