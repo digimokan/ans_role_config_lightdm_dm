@@ -4,3 +4,6 @@ linux_lightdm_conf_path: "/etc/lightdm/lightdm.conf"
 # path to LightDM graphical gtk-greeter config file
 linux_lightdm_gtk_greeter_conf_path: "/etc/lightdm/lightdm-gtk-greeter.conf"
 
+# AccountsService directory containing one file for each user, for user config
+linux_accts_user_dir: '/var/lib/AccountsService/users'
+

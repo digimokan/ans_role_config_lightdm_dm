@@ -15,3 +15,7 @@
   ansible.builtin.include_tasks: config_graphical_login/main.yml
   when: not set_auto_login
 
+- name: "Hide specific users from the graphical greeter login menu"
+  ansible.builtin.include_tasks: hide_users/main.yml
+  when: not ((hide_users_list | length) > 0)
+

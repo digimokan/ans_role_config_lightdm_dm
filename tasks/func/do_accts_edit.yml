@@ -1,0 +1,15 @@
+- name: "Edit {{ accts_user_path }}: set 'SystemAccount=true' for user '{{ user_to_hide }}'"
+  ansible.community.ini_file:
+    path: "{{ accts_user_path }}"
+    section: 'User'
+    option: 'SystemAccount'
+    value: 'true'
+    owner: 'root'
+    mode: '600'
+    state: present
+    create: yes
+  vars:
+    accts_user_path: "{{ accts_user_dir }}/{{ user_to_hide }}"
+  become: true
+  become_user: root
+
