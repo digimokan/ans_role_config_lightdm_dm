@@ -11,7 +11,8 @@
     var: user_to_hide
 
 # - name: "Edit {{ accts_user_path }}: set 'SystemAccount=true' for user '{{ user_to_hide }}'"
-- name: "Edit {{ accts_user_path }}: set 'SystemAccount=true'"
+# - name: "Edit {{ accts_user_path }}: set 'SystemAccount=true'"
+- name: "Edit a path: set 'SystemAccount=true'"
   ansible.community.ini_file:
     path: "{{ accts_user_path }}"
     section: 'User'
