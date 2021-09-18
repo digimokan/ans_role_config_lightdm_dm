@@ -1,3 +1,15 @@
+- name: "Debug print accts_user_dir"
+  ansible.builtin.debug:
+    var: accts_user_dir
+
+- name: "Debug print accts_user_path"
+  ansible.builtin.debug:
+    var: accts_user_path
+
+- name: "Debug print user_to_hide"
+  ansible.builtin.debug:
+    var: user_to_hide
+
 - name: "Edit {{ accts_user_path }}: set 'SystemAccount=true' for user '{{ user_to_hide }}'"
   ansible.community.ini_file:
     path: "{{ accts_user_path }}"
