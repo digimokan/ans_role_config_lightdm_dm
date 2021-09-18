@@ -1,7 +1,3 @@
-- name: "Debug print hide_users_list"
-  ansible.builtin.debug:
-    var: hide_users_list
-
 - name: "Hide user from graphical login menu"
   ansible.builtin.include_tasks: func/do_accts_edit.yml
   loop: "{{ hide_users_list }}"
