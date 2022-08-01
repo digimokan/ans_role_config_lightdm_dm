@@ -13,3 +13,6 @@ freebsd_terminal_config_path: '/etc/gettytab'
 # config file for system-wide console configuration
 freebsd_console_config_path: '/etc/ttys'
 
+# virtual console tty to run Ly on
+freebsd_ly_virtual_console_num: '1'
+
