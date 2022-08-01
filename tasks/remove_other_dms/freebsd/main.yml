@@ -1,0 +1,33 @@
+- name: "Remove terminal configuration for Ly in '{{ freebsd_terminal_config_path }}'"
+  ansible.builtin.blockinfile:
+    path: "{{ freebsd_terminal_config_path }}"
+    marker: "# {mark} ANSIBLE MANAGED BLOCK: Ly display manager terminal config"
+    state: absent
+    create: no
+  become: true
+  become_user: root
+
+- name: "Restore default virtual console {{ virtual_console_num }} config in '{{ freebsd_console_config_path }}'"
+  ansible.builtin.lineinfile:
+    path: "{{ freebsd_console_config_path }}"
+    regexp: >-
+      ^(# )?ttyv{{ virtual_console_num }}(.*)$
+    line: >-
+      ttyv{{ virtual_console_num }}\2
+    state: present
+    firstmatch: yes
+    create: no
+    backrefs: yes
+    backup: yes
+  become: true
+  become_user: root
+
+- name: "Remove virtual console {{ virtual_console_num }} config for Ly in '{{ freebsd_console_config_path }}'"
+  ansible.builtin.blockinfile:
+    path: "{{ freebsd_console_config_path }}"
+    marker: "# {mark} ANSIBLE MANAGED BLOCK: Ly virtual console config"
+    state: absent
+    create: no
+  become: true
+  become_user: root
+

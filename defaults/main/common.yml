@@ -14,3 +14,6 @@ session: "mate"
 # set background-image-path for login screen (set to empty string for no image)
 login_screen_image_path: ""
 
+# uninstall other (non-LightDM) display managers, and disable their services
+remove_other_display_managers: true
+

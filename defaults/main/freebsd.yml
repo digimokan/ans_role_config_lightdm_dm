@@ -7,3 +7,9 @@ freebsd_lightdm_gtk_greeter_conf_path: "/usr/local/etc/lightdm/lightdm-gtk-greet
 # AccountsService directory containing one file for each user, for user config
 freebsd_accts_user_dir: '/var/db/AccountsService/users'
 
+# config file for system-wide terminal configuration
+freebsd_terminal_config_path: '/etc/gettytab'
+
+# config file for system-wide console configuration
+freebsd_console_config_path: '/etc/ttys'
+

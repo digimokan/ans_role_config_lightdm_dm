@@ -1,3 +1,7 @@
+- name: "Remove and unconfigure any other DMs that may be installed"
+  ansible.builtin.include_tasks: remove_other_dms/main.yml
+  when: remove_other_display_managers
+
 - name: "Install main DM, greeter, and support LightDM packages"
   ansible.builtin.include_tasks: install_main_pkgs/main.yml
 

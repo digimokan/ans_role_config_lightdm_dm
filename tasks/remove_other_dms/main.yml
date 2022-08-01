@@ -1,0 +1,15 @@
+- name: "Uninstall other DM packages: {{ packages_to_uninstall }}"
+  ansible.builtin.package:
+    name: "{{ packages_to_uninstall }}"
+    state: absent
+  vars:
+    packages_to_uninstall:
+      - ly
+      - xdm
+  become: true
+  become_user: root
+
+- name: "Unconfigure other DMs for FreeBSD"
+  ansible.builtin.include_tasks: freebsd/main.yml
+  when: ansible_os_family == "FreeBSD"
+
