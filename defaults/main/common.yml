@@ -1,9 +1,3 @@
-# set default_user_name to login automatically
-set_auto_login: false
-
-# auto-login group (used if auto_login_group_name is defined)
-auto_login_group_name: "autologin"
-
 # list of users to hide from the graphical greeter login menu
 hide_users_list: []
 
