@@ -7,7 +7,7 @@
     owner: 'root'
     mode: '600'
     state: present
-    create: yes
+    create: true
   vars:
     accts_user_path: "{{ accts_user_dir }}/{{ user_to_hide }}"
   become: true

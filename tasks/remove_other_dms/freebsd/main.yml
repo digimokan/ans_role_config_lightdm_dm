@@ -3,7 +3,7 @@
     path: "{{ freebsd_terminal_config_path }}"
     marker: "# {mark} ANSIBLE MANAGED BLOCK: Ly display manager terminal config"
     state: absent
-    create: no
+    create: false
   become: true
   become_user: root
 
@@ -15,10 +15,10 @@
     line: >-
       ttyv{{ freebsd_ly_virtual_console_num }}\2
     state: present
-    firstmatch: yes
-    create: no
-    backrefs: yes
-    backup: yes
+    firstmatch: true
+    create: false
+    backrefs: true
+    backup: true
   become: true
   become_user: root
 
@@ -27,7 +27,7 @@
     path: "{{ freebsd_console_config_path }}"
     marker: "# {mark} ANSIBLE MANAGED BLOCK: Ly virtual console config"
     state: absent
-    create: no
+    create: false
   become: true
   become_user: root
 

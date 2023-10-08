@@ -5,7 +5,7 @@
       ^\[Seat:\*\]$
     block: "{{ block_lines }}"
     marker: "# {mark} ANSIBLE MANAGED BLOCK: {{ block_description }}"
-    create: no
+    create: false
     state: present
   become: true
   become_user: root
