@@ -10,12 +10,12 @@
     block_description: "manual login option"
     block_lines: "greeter-show-manual-login=true"
 
-- name: "Set login screen background image to {{ login_screen_image_path }}"
+- name: "Set login screen background image to {{ lightdm_login_screen_image_path }}"
   ansible.builtin.include_tasks: func/edit_lightdm_gtk_conf.yml
   vars:
     block_description: "login screen background image"
-    block_lines: "background={{ login_screen_image_path }}"
+    block_lines: "background={{ lightdm_login_screen_image_path }}"
     insertafter: >-
       ^\[greeter:\*\]$
-  when: (login_screen_image_path)
+  when: (lightdm_login_screen_image_path)
 

@@ -1,13 +1,13 @@
 # list of users to hide from the graphical greeter login menu
-hide_users_list: []
+lightdm_hide_users_list: []
 
 # select the session to run
 # see /usr/share/xsessions/ for session names ("mate", "kodi", "xfce", etc)
-session: "mate"
+lightdm_session: "mate"
 
 # set background-image-path for login screen (set to empty string for no image)
-login_screen_image_path: ""
+lightdm_login_screen_image_path: ""
 
 # uninstall other (non-LightDM) display managers, and disable their services
-remove_other_display_managers: true
+lightdm_remove_other_display_managers: true
 

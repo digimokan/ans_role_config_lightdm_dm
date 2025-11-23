@@ -1,12 +1,12 @@
 - name: "Edit 'lightdm.conf' file for Arch Linux"
   ansible.builtin.include_tasks: do_conf_edit.yml
   vars:
-    conf_file_path: "{{ linux_lightdm_conf_path }}"
+    conf_file_path: "{{ lightdm_linux_lightdm_conf_path }}"
   when: ansible_system == "Linux"
 
 - name: "Edit 'lightdm.conf' file for FreeBSD"
   ansible.builtin.include_tasks: do_conf_edit.yml
   vars:
-    conf_file_path: "{{ freebsd_lightdm_conf_path }}"
+    conf_file_path: "{{ lightdm_freebsd_lightdm_conf_path }}"
   when: ansible_os_family == "FreeBSD"
 

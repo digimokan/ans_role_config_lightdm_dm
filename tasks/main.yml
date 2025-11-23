@@ -1,6 +1,6 @@
 - name: "Remove and unconfigure any other DMs that may be installed"
   ansible.builtin.include_tasks: remove_other_dms/main.yml
-  when: remove_other_display_managers
+  when: lightdm_remove_other_display_managers
 
 - name: "Install main DM, greeter, and support LightDM packages"
   ansible.builtin.include_tasks: install_main_pkgs/main.yml
@@ -16,5 +16,5 @@
 
 - name: "Hide specific users from the graphical greeter login menu"
   ansible.builtin.include_tasks: hide_users/main.yml
-  when: (hide_users_list | length) > 0
+  when: (lightdm_hide_users_list | length) > 0
 

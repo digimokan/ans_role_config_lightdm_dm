@@ -1,12 +1,12 @@
 - name: "Hide users from login menu for Linux"
   ansible.builtin.include_tasks: hide_user.yml
   vars:
-    accts_user_dir: "{{ linux_accts_user_dir }}"
+    accts_user_dir: "{{ lightdm_linux_accts_user_dir }}"
   when: ansible_system == "Linux"
 
 - name: "Hide users from login menu for FreeBSD"
   ansible.builtin.include_tasks: hide_user.yml
   vars:
-    accts_user_dir: "{{ freebsd_accts_user_dir }}"
+    accts_user_dir: "{{ lightdm_freebsd_accts_user_dir }}"
   when: ansible_os_family == "FreeBSD"
 

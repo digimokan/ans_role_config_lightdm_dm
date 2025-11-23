@@ -1,6 +1,6 @@
-- name: "Set default session to '{{ session }}'"
+- name: "Set default session to '{{ lightdm_session }}'"
   ansible.builtin.include_tasks: func/edit_lightdm_conf.yml
   vars:
     block_description: "user-session"
-    block_lines: "user-session={{ session }}"
+    block_lines: "user-session={{ lightdm_session }}"
 

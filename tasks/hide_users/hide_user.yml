@@ -1,6 +1,6 @@
 - name: "Hide user from graphical login menu"
   ansible.builtin.include_tasks: func/do_accts_edit.yml
-  loop: "{{ hide_users_list }}"
+  loop: "{{ lightdm_hide_users_list }}"
   loop_control:
     loop_var: user_to_hide
 
